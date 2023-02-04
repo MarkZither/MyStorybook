@@ -1,0 +1,97 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
+
+<Meta title="Design Tokens/Colors" />
+
+# Colors
+
+<ColorPalette>
+<h4>Brand colors</h4>
+  <ColorItem title="brand-01" subtitle="Coral" colors={['#00266f']} />
+  <ColorItem title="brand-02" subtitle="Coral" colors={['#004ed8']} />
+  
+  <h4>UI colors</h4>
+  <ColorItem title="ui-01" subtitle="Coral" colors={['#00266f']} />
+  <ColorItem title="ui-02" subtitle="Coral" colors={{base: '#00266f', 'light-300': '#4d83e4', 'light-100': '#b3caf3', 'light-050': '#e0eafa'}} />
+  <ColorItem title="ui-03" subtitle="Coral" colors={{base: '#698a95', 'light-300': '#96adb5', 'light-100': '#d2dcdf', 'light-050': '#edf1f2'}} />
+  <ColorItem title="ui-04" subtitle="Coral" colors={['#bbf3ff']} />
+  <ColorItem title="ui-05" subtitle="Coral" colors={['#004ed8']} />
+  
+  <h4>Background & border colors</h4>
+  <ColorItem title="background-01" subtitle="Coral" colors={['#ffffff']} />
+  <ColorItem title="background-02" subtitle="Coral" colors={['#f3f7f8']} />
+  <ColorItem title="background-03" subtitle="Coral" colors={['#f4f7fa']} />
+  <ColorItem title="background-04" subtitle="Coral" colors={['#f5f7fa']} />
+  <ColorItem title="background-05" subtitle="Coral" colors={['#eaf0f8']} />
+  <ColorItem title="background-06" subtitle="Coral" colors={['#004ed8']} />
+  <h4>Feedback colors</h4>
+  <ColorItem
+    title="Feedback"
+    subtitle="Success"
+    colors={{
+      'base': '#00D464',
+      'light-300': '#4DE193',
+      'light-100': '#B3F2D1',
+      'light-050': '#E0FAEC'
+    }}
+  />
+  <ColorItem
+    title="Feedback"
+    subtitle="Info"
+    colors={{
+      'base': '#00C4FF',
+      'light-300': '#4DD6FF',
+      'light-100': '#B3EDFE',
+      'light-050': '#E0F8FF'
+    }}
+  />
+  <ColorItem
+    title="Feedback"
+    subtitle="Warning"
+    colors={{
+      'base': '#FFE200',
+      'light-300': '#FEEB4D',
+      'light-100': '#FFF6B3',
+      'light-050': '#FFFCE0'
+    }}
+  />
+  <ColorItem
+    title="Feedback"
+    subtitle="Danger"
+    colors={{
+      'base': '#FF4D55',
+      'light-300': '#FF8288',
+      'light-100': '#FFCACC',
+      'light-050': '#FFEAEB'
+    }}
+  />
+  <ColorItem
+  title="Feedback"
+  subtitle="Recommendation"
+  colors={{
+    'base': '#FC944D',
+    'light-300': '#FFAF7A',
+    'light-100': '#FFE4D2',
+    'light-050': '#FFEFE4'
+  }}
+/>
+<h4>Gradients</h4>
+<ColorItem
+title="Gradient-01"
+subtitle="Recommendation"
+colors={{
+  'horizontal': 'linear-gradient(to right, #002a6d 0%,#738993 100%)',
+  'vertical': 'linear-gradient(to bottom, #738993 0%,#002a6d 100%)'
+}}
+/>
+<ColorItem
+title="Gradient-02"
+subtitle="Recommendation"
+colors={{
+  'horizontal': 'linear-gradient(to right, #004ed8 0%,#00266f 100%)',
+  'vertical': 'linear-gradient(to bottom, #004ed8 0%,#00266f 100%)'
+}}
+/>
+</ColorPalette>
+
+<DesignTokenDocBlock categoryName="SCSS Colors" viewType="card" />;

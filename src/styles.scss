@@ -1,1 +1,175 @@
+@import './../node_modules/myscssdesigntokens/styles.scss';
 /* You can add global styles to this file, and also import other style files */
+
+/**
+  * @tokens SCSS Colors
+  * @presenter Color
+  */
+$b500: #00f; /* Token Description Example */
+$brand2: $b500;
+$brand3: $g500;
+
+
+$colorMap: (
+    brand-01: (
+      base: #00266f
+    ),
+    brand-02: (
+      base: #004ed8
+    ),
+    ui-01: (
+      base: #00266f
+    ),
+    ui-02: (
+      base: #004ed8,
+      light-300: #4d83e4,
+      light-100: #b3caf3,
+      light-050: #e0eafa
+    ),
+    ui-03: (
+      base: #698a95,
+      light-300: #96adb5,
+      light-100: #d2dcdf,
+      light-050: #edf1f2
+    ),
+    ui-04: (
+      base: #bbf3ff
+    ),
+    ui-05: (
+      base: #004ed8
+    ),
+    background-01: (
+      base: #ffffff
+    ),
+    background-02: (
+      base: #f3f7f8
+    ),
+    background-03: (
+      base: #f4f7fa
+    ),
+    background-04: (
+      base: #f5f7fa
+    ),
+    background-05: (
+      base: #eaf0f8
+    ),
+    background-06: (
+      base: #004ed8
+    ),
+    text-01: (
+      base: #002832
+    ),
+    text-02: (
+      base: #002832
+    ),
+    text-03: (
+      base: #002832
+    ),
+    text-04: (
+      base: #002832
+    ),
+    text-05: (
+      base: #ffffff
+    )
+);
+  
+$tokens: (
+    color: $colorMap//,
+    //space: $spaceMap,
+    //textSize: $textSizeMap,
+    //textWeight: $textWeightsMap
+);
+  
+
+/*******************/
+/********COLOR******/
+/*******************/
+@function getColor($color, $size: 'base') {
+    $colorTokens: map-get($tokens, 'color');
+    $selected: map-get($colorTokens, $color);
+    @return map-get($selected, $size)
+  }
+  
+  /**color**/
+  @mixin color($color, $size: 'base') {
+    color: getColor($color, $size);
+  }
+
+/**background-color**/
+@mixin background-color($color, $size: 'base') {
+    background-color: getColor($color, $size);
+  }
+
+/**
+  * @tokens SCSS Color
+  * @presenter Color
+  */
+.color {
+    display: inline-block;
+    border-radius: 4px;
+    &.brand-01 {
+      @include background-color(brand-01);
+    }
+    &.brand-02 {
+      @include background-color(brand-02);
+    }
+}
+
+/**
+  * @tokens SCSS Fonts
+  * @presenter FontFamily
+  */
+@font-face {
+    font-family: 'source-sans-pro';
+    src: url(assets/fonts/SourceSansPro/SourceSansPro-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'source-sans-pro';
+    src: url(assets/fonts/SourceSansPro/SourceSansPro-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'source-sans-pro';
+    src: url(assets/fonts/SourceSansPro/SourceSansPro-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'source-sans-pro';
+    src: url(assets/fonts/SourceSansPro/SourceSansPro-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$base: 'source-sans-pro', 'sans-serif';
+
+body {
+    font-family: $base;
+    font-size: 1rem;
+}
+.small{
+    font-size: 0.75rem;
+}
+.large{
+    font-size: 1.5rem;
+}
+.largest{
+    font-size: 1.75rem;
+    line-height: 26px;
+}
+
+.light{
+    font-weight: 300;
+}
+.regular{
+    font-weight: 400;
+}
+.semi-bold{
+    font-weight: 700;
+}
+.bold{
+    font-weight: 700;
+}

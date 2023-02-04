@@ -23,8 +23,9 @@
     "@angular/platform-browser": "~11.2.4",
     "@angular/platform-browser-dynamic": "~11.2.4",
     "@angular/router": "~11.2.4",
-    "myscssdesigntokens": "0.0.1",
+    "myscssdesigntokens": "0.0.2",
     "rxjs": "~6.6.0",
+    "storybook-design-token": "^1.0.1",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
   },
@@ -37,6 +38,7 @@
     "@storybook/addon-actions": "^6.2.8",
     "@storybook/addon-essentials": "^6.2.8",
     "@storybook/addon-links": "^6.2.8",
+    "@storybook/addon-docs": "^6.2.8",
     "@storybook/angular": "^6.2.8",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
